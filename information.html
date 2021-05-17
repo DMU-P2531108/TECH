@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <link rel href="https://www.dafont.com/paradox-2.font">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="css/stylesheet.css" type="text/css" rel="stylesheet"/>
+  <title>The males innerthought menupage</title>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+
+<!--Glow Text reference
+url(https://www.w3schools.com/howto/howto_css_glowing_text.asp)-->
+<style>
+ .glow {
+    font-family: "sketchzone", sans-serif;
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+ }
+ @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #FAF0DC, 0 0 20px #f6b05f, 0 0 30px #FAF0DC, 0 0 40px #aa5f08, 0 0 50px #FAF0DC, 0 0 60px #e60073, 0 0 70px #6c3c05;
+  }
+
+  to {
+    text-shadow: 0 0 20px #FF6700, 0 0 30px #FAF0DC, 0 0 40px #FF6700, 0 0 50px #FAF0DC, 0 0 60px #FF6700, 0 0 70px #FAF0DC, 0 0 80px #FF6700;
+  }
+ }
+ body {
+  background-image: url('img/stickynotes.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  width: 100%;
+ }
+
+
+
+</style>
+</head>
+<body>
+  <nav>
+  <input id="nav-toggle" type="checkbox">
+
+  <!-- They defined the div class (logo) to benefit movement and placement within
+  the stylesheet with the aim of adding the title within the menu to serve as a logo.-->
+
+
+  <!--The chosen approach included a <h4> tag inside the written (title) aspect,
+    suggesting they'd chosen a level 4 heading for size compatibility. -->
+    <div  class="glow"><h4>The Males<strong>.INNERTHOUGHT</strong></h4></div>
+
+    <!-- Creating the navbar  An ul> class attribute was defined. This informs the structure
+     that a list (pages) is being generated, with < Li> containing the website's pages and
+     <href> anchor tag specifying and marking the relevant html pages.
+    This can be changed in the stylesheet to make it float to the right. -->
+    <ul class="links">
+      <li><a href="menu.html">Home</a></li>
+      <li><a href="Journal.html">Journal</a></li>
+      <li><a href="information.html">Helpline</a></li>
+      <button class="but"> <a href="information-dark.html">DarkMode</a></button>
+  </ul>
+
+
+
+    <label for="nav-toggle" class="icon-burger">
+      <!-- This website has a mark Nav-toggle attribute, which tells the atom that when the menu is pressed,
+      it can create an open version of the menu bar, or in other words, a lightweight menu. -->
+
+      <!-- They used div class of lines to construct a burger menu. This would be useful in creating a hamburger menu in their style sheet.-->
+        <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+  </nav>
+
+
+<!--  video Giving th
+
+is div the journal class encourages the editor to customize the page's header.-->
+
+<div>
+      <video class="InformationV" controls width="100%">
+        <source src="video/video1.mp4"  type="video/mp4">
+        <source src="video/video1.ogg"  type="video/ogg">
+
+</video>
+<h1 class="text" style="background-color:#d9b684">Mens Mental Health Awareness</h1>
+          <!--  type video Giving this div the journal class encourages the editor to customize the page's header.-->
+
+      <video class="Information" controls width="100%">
+        <source src="video/video2.mp4"  type="video/mp4">
+        <source src="video/video2.ogg"  type="video/ogg">
+        </video>
+    </div>
+    <h1 class="text" style="background-color:#d9b684">BE</h1>
+     <p class="text" style="background-color:#d9b684">A short film on Depression</p>
+
+      <video class="Information" controls width="100%">
+        <source src="video/video3.mp4"  type="video/mp4">
+        <source src="video/video3.ogg"  type="video/ogg">
+        </video>
+
+    <h1 class="text" style="background-color:#d9b684">Mens Mental Health animation</h1>
+
+</body>
+</html>
