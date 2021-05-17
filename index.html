@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <link rel href="https://www.dafont.com/paradox-2.font">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="css/stylesheet.css" type="text/css" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<title>The males innerthought</title>
+</head>
+  <body>
+
+
+
+
+<!--Background-->
+<!--They've used a video feature as their backdrop in this segment to generate the illusion of a 3D effect on their login page.-->
+<!--They've added autoplay and a loop controls, which is important since the page will already be scheduled to play indefinitely when it loads. -->
+    <video autoplay muted loop id="myVideo">
+      <source src="darkclouds.mp4" type="video/mp4">
+      Your browser does not support the video.
+    </video>
+
+<!-- Title-->
+<header>The Males innerthought</header>
+
+<!--Form
+url (https://www.youtube.com/watch?v=qDNsgRZw_a4)-->
+
+<div class="content">
+    <header> LOGIN FORM </header>
+<form action="menu.html">
+  <div class="field">
+  <!--The span Class attribute  of fa fa-user is used to group ready-to-style objects within the stylesheet;
+  in this case, the logo would be used to display the username and password section.-->
+    <span class="fa fa-users"></span>
+    <input type="text" required placeholder="Username">
+</div>
+<div class="field">
+  <span class="fa fa-lock"></span>
+  <input type="Password" class="password" required placeholder="Password">
+
+  <!--They've produced an element that will alert the website when activated/clicked to
+  display/reveal the appropriate password by using the span class. -->
+  <span class="show">SHOW</span>
+
+</div>
+<br>
+<div class="field">
+  <span></span>
+  <!--This function is used to create dynamic controls for web-based forms that accept data from the user.
+  They used the input feature to tell the website to submit to the next tab, which in this case was the
+  Homepage. -->
+  <input type="Submit" value="LOGIN">
+</div>
+
+
+<div class="signup"><br>Don't have an account?
+
+  <!--During the site sign up to the login pages, an anchor function, such as a href attribute,
+   was used to apply a hyperlink to web registration pages. -->
+  <a href="file:///Users/tianabrown/Desktop/TECH/Reg.html">Signup Now</a>
+
+</div>
+</form>
+</div>
+
+<!--This involved the inclusion of previous require placement within javascript to ensure it performed properly,
+such as the Hide and Reveal aspects.So if viewer wanted to double check the password they put in they were able
+to click the show button to reveal/hide the passowrd -->
+<script>
+      var input = document.querySelector('.password');
+      var show = document.querySelector('.show');
+      show.addEventListener('click', active);
+      function active(){
+        if(input.type === "password"){
+          input.type = "text";
+          show.style.color = "#1DA1F2";
+          show.textContent = "HIDE";
+        }else{
+          input.type = "password";
+          show.textContent = "SHOW";
+          show.style.color = "#111";
+        }
+      }
+    </script>
+
+
+  </body>
+</html>
