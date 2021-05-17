@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <link rel href="https://www.dafont.com/paradox-2.font">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="css/stylesheet.css" type="text/css" rel="stylesheet"/>
+  <title>The males innerthought</title>
+  <style>
+  div {
+    background-color:#89CFF0;
+    animation-name: example;
+    animation-duration: 14s;
+  }
+</style>
+  </head>
+
+
+<!--Form
+url(https://www.youtube.com/watch?v=UEZ60e4MsgA&t=58s)
+-->
+
+<!--Since body edit was present in the style sheet, they assigned the registration page the body class of reg,
+enabling them to make modifications to the page without compromising the other relevant pages in the stylesheet. -->
+<body class="reg">
+
+  <!-- By including an overall container tag, you will be able to place the content
+  contained on the website, such as the box in which the text will be shown.
+   While styling a backdrop or other effects, there is no problem.-->
+<div class="container">
+  <div class="title">SignUp</div>
+  <form action="menu.html">
+    <div class="user-details">
+      <div class="input-box">
+      <span class="details">Full Name</span>
+      <!-- The use of a required placeholder informs the user that they must fill out the section in
+      order to log in, effectively preventing them from doing so. This is due to the field failing to provide an expected value/input-->
+      <input type="text" placeholder="Enter Full Name" required>
+    </div>
+    <div class="input-box">
+    <span class="details">Character Name</span>
+    <input type="text" placeholder="Create A Name" required>
+  </div>
+  <div class="input-box">
+  <span class="details">Email/Phone Number</span>
+  <input type="text" placeholder="Enter Either Email/Number" required>
+</div>
+<div class="input-box">
+<span class="details">Password</span>
+<input type="text" placeholder="Enter Password" required>
+</div>
+<div class="input-box">
+<span class="details">Confirm Password</span>
+
+<!-- This specifies a text area inside HTML that is set to 20 characters by default.-->
+<input type="text" placeholder="Confirm Password" required>
+</div>
+</div>
+
+<div class="button">
+  <input type="submit" value="Register">
+</div>
+  </form>
+</div>
+</body>
+</html>
