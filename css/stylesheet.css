@@ -1,0 +1,657 @@
+*{
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body {
+    display: block;
+    margin: 5px;
+    background-color: #000080;
+
+}
+#myVideo {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* loging setting */
+.content {
+  /* With the top and left positions set to 50 percent, the position is set to a fixed viewport, preventing any changes made by window scrolling. */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* The container was centred inside the logging page using the translate element by changing the coordinates.*/
+  transform: translate(-50%, -50%);
+    /* Text alignment column has been set to center affecting the appearance of text in a paragraph.*/
+  text-align: center;
+  /*using a high Z-index* informs the code this should be at the front of the stack order*/
+  z-index: 999;
+  width: 300px;
+  padding: 60px 22px;
+  /* identifying the box-shadow around the eleent (login page)
+ inmatating an glow effect with the use of brighter colours. using 280px creates wider surface of shadow.*/
+   box-shadow: -1px 4px 280px 0px rgba(210, 105, 30);
+  ;
+}
+.content header{
+  /*Within the content header (Title) To prevent a colour clash, the title needed to be bright to contrast with the dark backdrop, equalling white as the title colour.*/
+  color: white;
+  /*The font size of 50px was chosen to match the required sizing of the header inside the form borders.*/
+  font-size: 50px;
+ /* Since the imported font was already bold, the font weight was kept at 500.)*/
+  font-weight: 500;
+  margin: 0 0 35px 0;
+  /*Used a font family to idenfiy the imported font from dafont(sketchzone)*/
+  font-family: "sketchzone", sans-serif;
+ }
+.field{
+  /*By using relative positioning with a height and width adjustment,
+  browsers are informed that the text within the textboxes/field function should be shifted away from its default position*/
+ position: relative;
+ height: 45px;
+ width: 100%;
+ /*The selected display is flex, which causes the group of objects in this class to all go in the same direction,
+  manipulating the dimension and spacing between the password, username, login, and show button.*/
+  display:flex;
+ /*The background inside the textboxes will be white in order for the text to be visibly expressed as the viewers type*/
+  background: rgba(255, 255, 255, 0.94);
+}
+.field span{
+  /*The chosen modification elements within this class are line height and width, which are specifically focused on the change
+  of the show/reveal password icon. Setting the line height to 55px ensures that the text and password positioning are in sync.*/
+  width: 30px;
+  line-height: 55px
+}
+.field input{
+   /*To avoid the border effect seen with the field input class by using a transparent background,
+   they included border and outline values telling the browser to set them to 'none' to prevent any misplaced outline effects.*/
+  background:transparent;
+  border: none;
+  outline: none;
+ /*The required placementship within coordination to the text box sizes is allowed by instructing the browser to use font size 16.*/
+  font-size: 16px;
+  font-family: sans-serif;
+  cursor: pointer;
+
+
+}
+.show {
+
+  position: absolute;
+  right: 13px;
+  /*The show tag must be clear and bold to audiences, so a font weight of 700
+  and a font size of 13px are selected.  This saves time when you're wondering whether you've typed your password wrong. */
+  font-size: 13px;
+  font-weight: 700;
+ /*Taking into account the desktop capability, they used pointer cursor because it provides a more friendly solution that
+ suits with the theme and is also more elder friendly.
+ */
+  cursor: pointer;
+
+ /*By using view of none, they advised the browser that if the password section is not enabled, the original status of
+ the entire element (show button) should be hidden*/
+  display:none;
+  font-family: sans-serif;
+}
+.password:valid ~ .show{
+  /*When the password section is activated, this class notifies the
+  browser that the view will shift to Block, a stilled position representing paragraph form*/
+  display: block;
+}
+input[type="Submit"]{
+  /*They've told their CSS to resize and placed their submit button in the centre of the form, hiding the white
+  textbox behind it, using position/top/height/width.*/
+  position: relative;
+  top:-15%;
+  height: 50px;
+  width: 10000%;
+ /*Keeping with the front page's style of blue colours, they've chosen a light blue submit button accompanied by a
+ white text to stand out against the background colour. By identifying the class with a background: colour colour(text): colour*/
+  background: #3498db;
+  color:white;
+  font-size: 18px;
+ /*By modifying the line-spacing to 2px from the browser's default setting,
+  it is possible to construct a more dramatic spacing that makes the words more visible with a font weight of 600.*/
+ letter-spacing: 2px;
+ font-weight: 600;
+ cursor: pointer;
+ font-family: sans-serif;
+}
+input[type="Submit"]:hover{
+  /*They have a hover effect in the stylesheet to accompany the submit button on desktop version:
+  This website's homepage features a background with a skin tone palette,which was implemented on intent to help introduce the next colour theme(The homepage).*/
+  background: #CB8442;
+}
+.signup{
+  color: white;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+.signup a{
+  /*They've attached a progress cursor to the sign-up elements that guide you to reg.html,
+  which informs the browser for loading effect cursor, which serves to remind the user that
+  they're being redirected to another page*/
+  cursor: progress;
+  color: #87CEEB;
+  text-decoration: none;
+}
+.signup a:hover{
+  text-decoration: underline;
+  color: orange;
+}
+
+/* register setting */
+
+ /*By specifying the key frame inside the stylesheet, a timing effect based on percentages was implemented.
+ From 0% to 100%, a separate colour code is allocated, resulting in a rainbow effect; this was achieved
+ deliberately to add the colour theme throughout the pages after the login.*/
+ @keyframes example {
+  0%   {background-color: #fce6cc;}
+  15%  {background-color: #f6b05f;}
+  25%  {background-color: #f6b05f;}
+  50%  {background-color: #aa5f08;}
+  75%  {background-color: #9b5607;}
+  95%   {background-color: #6c3c05;}
+  100% {background-color: #361e02;}
+ }
+.reg{
+ /*Implementing display flex was critical in building a responsive website because it adjusts the shapes
+ container to the available screen sizing*/
+  display: flex;
+  height: 100vh;
+ /*Working in conjunction with the display:flex jutify-content is mounted in the centre such that it remains
+ in the centre regardless of the screen size of the device used*/
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  /* In order to maintain the blue tone colour scheme, they used a backdrop linear gradient, which combines the colour codes
+  to produce gradient effects.As the aim for the register type was simplicity, this was done to add dimension to the background tagretting both auidence*/
+  background: linear-gradient(153deg, #0c0c0c, #00001a, #001b3a, #001b3a, #00001a, #0c0c0c);
+}
+.container{
+  /*By associating the container class with a maximum width of 70%, the browsers becomes informed that the width
+  can be stretched to 100%. This ensures that it will change in height as the screen is greater than 70 percent.*/
+  max-width: 70%;
+  width: 100%;
+
+ /*More padding provides more space for the border-radius to customsie the borders. The preferred solution was to construct
+ a curved bubble effect with a setting of 50px, adhering to the theme of simplicity while remaining artistic, as the theme
+ of the website is decluttering the mind this means avoiding overusing elements.*/
+  padding: 55px 30px;
+  border-radius: 50px;
+  box-shadow: -1px 4px 28px 0px rgba(50, 105, 30);
+}
+.container form .user-details{
+  /*Within their CSS they've identified flex wrap-wrap this determines
+  how the positioning of the containers will be presented depending on
+  the screen such as in line or multipul lines.*/
+  display: flex;
+  flex-wrap: wrap;
+  /*They'll be able to specify the spacing between and around the subject within the browser by justfying the content within this class.*/
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+ /*They've implemented a block display in the user's browser that displays the
+ textbox/input within one cohesive line , simulating a paragraph environment.
+ This is continually done within each input.*/
+.user-details .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+ /*They've used CSS in the textbox section to help them improve their coding. Using a height of 35% to allow enough space for
+ text to be present/seen, whilst a width of 100% means that the increase or decrease in size would be at 100% of the screen*/
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #00001a;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  /*They've used transformation throughout the movement; when the page loads, the textboxes
+  transition into their positioned setup; this was set to a 0.3 second timer to ease into the browser*/
+  transition: all 0.3s ease;
+}
+form input[type="radio"]{
+  display: none;
+}
+ form .button input{
+   cursor: progress;
+   height: 100%;
+   width: 100%;
+   outline: none;
+   color: #fff;
+   border: none;
+   font-size: 18px;
+   font-weight: 500;
+   border-radius: 5px;
+   letter-spacing: 1px;
+   background:linear-gradient(153deg, #0c0c0c, #00001a, #001b3a, #001b3a, #00001a, #0c0c0c);
+
+ }
+ form .button input:hover{
+  background: linear-gradient(-135deg,#e4f0f6,#bcd9ea,#8bbdd9
+  )
+ }
+@media(max-width: 800px) {
+
+  /*They've used a media query to tell the browser when to start updating the look of their interface.
+  They've ordered a class in this CSS to be set to a width of 100%, which would only apply to screen sizes 800 and below. */
+  .container {
+    max-width:100%;
+  }
+form .user-details .input-box{
+ margin-bottom: 15px;
+ width: 100%;
+ }
+ }
+
+ .container form .user-details{
+   max-height: 300px;
+   overflow-y: scroll;
+ }
+
+/* menu page setting*/
+.mbody{
+  /*This class was added to the menu page body to keep the page from matching the previous body tag in CSS.
+   Setting the margin and padding to 0 meant that the whole page could be filled without the need for a outer border*/
+ margin: 0;
+ padding: 0;
+ }
+.container {
+	position: relative;
+	margin-top: 100px;
+
+}
+.container img {
+  /*The text inside this div was provided to the nav bar using block view,
+  which meant it would be shown in a straight line in paragraph format. */
+	display: block;
+
+}
+nav {
+  /*They've linked the nav bar to a fixed position within the nav design.
+  This ensures that it will remain in the same position regardless of scrolling or resizing. */
+	position: fixed;
+
+ /*Using a z-index and left, right, top, we were able to put the navbar at the top of the page
+ by assigning it a z-index of 10, which is greater than the default setting for other objects on the page.*/
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0%;
+
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 5%;
+	height: 100px;
+
+  /*using an orange/brown colour code This was accomplished in order to assist the visually affected audience,
+  since orange is a more dominate colour to see for those who suffer from colour blindness.*/
+	background-color: #964B00;
+  width: 100%;
+}
+nav .glow {
+  /*This class was in charge of the glow effect inside the title on the navbar.
+  It begins with the float to left element , which tells the browser that the
+  text should appear on the left side of the container.  */
+	float: left;
+	width: 40%;
+	height: 100%;
+
+ /*By making it a flex display, we were informing the browser to extend
+ the title inside the nav bar, keeping it from overflowing.*/
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+	color: white;
+}
+nav .links {
+  /*The use of the display flex option instructs the browser that instead of showing the menu bar as a horizontal bulletpoint,
+  it can be spread out vertically over the navigation bar.The headings within the nav bar is placed across the page using width(60%),
+  leaving space between the titles. */
+	display: flex;
+  /*using padding and margin of 0 postions the heading within the center of the nav bar*/
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+  /* By providing space around the topic, in this case the menu headings,
+  justify-content with space around prevents the headings from being too close to one another.*/
+	justify-content: space-around;
+  /* informs the broswer to postion the text vericially centered across the width of menu bar */
+	align-items: center;
+}
+nav .links li {
+  /*list style is; removes the bullet points  */
+	list-style: none;
+}
+nav .links a {
+	display: block;
+   /*With the use of 1em padding this creates wider background space around the dark mode button */
+	padding: 1em;
+	font-size: 16px;
+  /*Adjusting the text decoration to font weight of bold this helps visibility when it comes to the older audience*/
+	font-weight: bold;
+	color:#d9b684;
+  /*Placing the text decoration to none this prevents the hamburger lines from showing up on the desktop nav bar*/
+	text-decoration: none;
+}
+#nav-toggle {
+  /*Nav toggle focuses on mobile navigation inside this browser;
+  it's adjusted to absolute with a top of -100px, which specifies
+  the browser where the icon/hamburger menu should be displayed */
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+  /**with a display none this prevents the hambuger menu showing within the desktop version layout */
+	display: none;
+
+  /*The mobile menu is placed at the top of the page but still visible to find and select using
+  an absolute position with the correct positioning of right 5%, top 60%.*/
+	position: absolute;
+	right: 5%;
+	top: 60%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+  /*The position of the hamburger menu lines will be determined by this width  of 30px and a height of 5px. */
+	width: 30px;
+	height: 5px;
+  /* By including a dark brown this stands out aganist the bright the background
+  this is benefical when targetting colour blind demograph as they'lbbe bale to idenfity the two tones/shades.*/
+	background-color:#231709;
+	margin: 5px;
+ /*The border raidus was set to 30px, which rounded the corners of the lines that formed the mobile menu.
+ With a transition ease-in-out, this results in a smoother entry and exists inside the responsive element*/
+	 border-radius: 30px;
+	transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width: 768px)
+/*This section coveres the aspects of creating a responisb=ve website these setting are suitable for mobile device that are between 0-768
+screen size wise. */
+{
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: 100%;
+		height: auto;
+    /**/
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+    /**/
+		overflow: hidden;
+    /**/
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+	nav :checked ~ .links {
+		bottom: 40px;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+
+ /*Within these three groups, a rotation degree of -225 has been allocated, but the.line:nth-child(2)
+ has been positioned with an opacity of 0% to generate a 'x'-shaped value when the mobile menu is activated.
+ This often informs viewers to the existence of a exit button on the menu bar*/
+nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	 }
+  }
+
+
+
+.grid {
+  bottom: 100px;
+  float: left;
+  /*This causes the two columns to be placed next to each other on a desktop edition due to the display grid forming columns */
+    display: grid;
+    width: 100%;
+    /*The selected grid applied to the webpage needs grid gap Within this page it has been given a 6rem
+    this defines the gap between the two columns placed on the homepage*/
+    grid-gap: 6rem;
+    /*The number of rows/columns (2) in the grid, as well as their dimensions, are communicated to the web browser using this CSS feature*/
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+  .grid-item {
+    background-color: #fff;
+    border-radius: 0.4rem;
+    width: 80%;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+   float: right;
+  }
+  .grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+  }
+  .card-img {
+    display: block;
+    width: 100%;
+    height: 15rem;
+    /*The object-fit property is used to define the columns in this case,
+    an image that can be resized to fit its container. object-fit: cover  
+     This tells the browser/property that the image needs to fill the container/column.*/
+    object-fit: cover;
+  }
+  .card-content {
+    /*This section is the text style between the columns; they've chosen to float right with a padding of 2rem,
+    which provides space around the text and keeps it from getting too close to the webpage's edge. */
+    float: right;
+    padding: 2rem;
+    height: 100%;
+
+  }
+.card-btn {
+
+    display: block;
+    width: 100%;
+    padding: 1.0rem;
+    font-size: 2rem;
+
+    /*The aim of this element was to provide a wide transparent button that could be used to navigate to other pages.
+    By setting the text-alignment to centre and using a 1rem line spacing, a distance between the letters is created. */
+    text-align: center;
+    letter-spacing: 1rem;
+    color: #964B00;
+    background-color: #231709;
+    transition: 0.2s;
+    cursor: pointer;
+
+  }
+
+/*To achieve the hover effect */
+
+/*An hover button was postioned it in */
+  .card-btn:hover,
+  .card-btn:active {
+    background-color: #ba6947;
+  }
+  .card-btn:hover span,
+  .card-btn:active span {
+    margin-left: 1.5rem;
+  }
+  .footer {
+      font-size: 20px;
+       position: fixed;
+       left: 0;
+       top: 96%;
+       height: 4%;
+       width: 100%;
+       background-color: #964B00;
+       color:#231709;
+       text-align: center;
+    }
+.footertext{
+  /*using fixed header their able tos ee contact Information throughout the movement of our website */
+  font-size: 14px;
+   position: fixed;
+   left: 0;
+   top: 94%;
+   height: 4%;
+   width: 100%;
+   /*using same colour as the header this aviod colour clash and text-align into the center  */
+   background-color: #964B00;
+   color:#231709;
+   text-align: center;
+
+}
+/*Journal Page*/
+*:before,
+*:after{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ font-family: "sketchzone", sans-serif;
+ font-weight: 500;
+}
+.contain{
+ background-color: #964B00;
+ width: 80%;
+ min-width: 420px;
+ padding: 35px 50px;
+ position: absolute;
+ left: 10%;
+ top: 30%;
+ border-radius: 10px;
+ box-shadow: 20px 30px 25px rgba(0,0,0,0.15);
+
+
+
+}
+.Journal{
+  font-size: 30px;
+  text-align: center;
+  color: #d9b684;
+  font-family: "sketchzone", sans-serif;
+  font-weight: 500;
+}
+.pJournal{
+  position: relative;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+.JForm{
+  width: 100%;
+  position: relative;
+  margin: 30px auto 0 auto;
+}
+.across{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ grid-gap: 20px 30px;
+ margin-bottom: 20px;
+
+
+
+}
+.Jlabel{ color: white;
+  font-size: 14px;
+
+
+}
+textarea, input{
+  width: 100%;
+  font-weight: 400;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1.2px solid #231709;
+  margin-top: 5px;
+}
+.Jbutton{
+  width: 200px;
+  font-size: 25px;
+  border: none;
+  padding: 10px 2px;
+  background: #111;
+  color: #fff;
+  border-radius: 3px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ff0000, #ff8307, #fffd06, #22ff07, #ff0926);
+  background-size: 400%;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+@keyframes gradi {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+
+}
+.Jbutton:hover{
+  animation: gradi 8s linear infinite;
+}
+.Jbutton::before{
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom:-5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #ff0000, #ff8307, #fffd06, #22ff07, #ff0926);
+}
+@media only screen and (max-width: 690px) {
+  .contain{
+    top: 50px;
+    left: 0px;
+    width: 40px;
+
+  }
+}
+@media only screen and(min-width: 700px) (max-width: 1000px){
+.contain{
+  top: 70px;
+  left: 76px;
+  width: 80%;
+}
+/* Button */
+
+/* By giving this clas of but it was placed within the stylesheet. */
+.but {
+  Width: 100px;
+  height: 100px;
+  border: none;
+  color: #d9b684;
+  background-color: rgba(24, 16, 8,);
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 0 #red;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+}
