@@ -31,6 +31,10 @@ body {
   z-index: 999;
   width: 300px;
   padding: 60px 22px;
+ /* identifying the box-shadow around the eleent (login page)
+ inmatating an glow effect with the use of brighter colours. using 280px creates wider surface of shadow.*/
+   box-shadow: -1px 3px 4px 0px rgba(210, 105, 30);
+  ;
 }
 .content header{
   /*Within the content header (Title) To prevent a colour clash, the title needed to be bright to contrast with the dark backdrop, equalling white as the title colour.*/
